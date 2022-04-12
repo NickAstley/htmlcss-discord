@@ -17,8 +17,8 @@ body {
 
 a {
     font-size: 0.9rem;
-    font-weight: bold;
     text-decoration: none;
+    color: white;
 }
 
 h1 {
@@ -37,8 +37,12 @@ h1, h2, h3 {
     padding: 2rem 0;
 }
 
-p {
+p, footer {
     line-height: 1.5;
+}
+
+li {
+    list-style: none;
 }
 
 header {
@@ -52,28 +56,10 @@ footer {
     padding-top: 5px;
 }
 
-footer hr {
-    color: white;
-}
-
 /* Background color classes */
 .grey-bg {
     background-color: #F6F6F6;
 }
-
-.salmon-bg {
-    background-color: #F08080;
-}
-
-.teal-bg {
-    background-color: #20B2AA;
-}
-
-.light-blue-bg {
-    background-color: #7FFFD4;
-}
-
-
 
 .container {
     width: 100%;
@@ -85,6 +71,7 @@ footer hr {
 
 .flex-box {
     display: flex;
+    justify-content: space-between;
 }
 
 .grow {
@@ -110,12 +97,7 @@ header .container {
 }
 
 header .flex-box {
-    justify-content: space-between;
     align-items: center;
-}
-
-.col {
-    padding: calc(var(--padding-default) / 4);
 }
 
 .navbar {
@@ -124,7 +106,6 @@ header .flex-box {
 }
 
 .navbar ul li {
-    list-style: none;
     display: inline;
 }
 
@@ -133,7 +114,6 @@ header .flex-box {
 }
 
 .flex-box .navbar a {
-    color: white;
     padding: 0.5rem 1rem;
 }
 
@@ -169,6 +149,10 @@ header .flex-box {
     color: white;
 }
 
+.text-lille {
+    color: #8EA1E1;
+}
+
 .jumbotron-section .container {
     padding: var(--padding-default) calc(var(--padding-default) * 7);
     min-height: 400px;
@@ -176,7 +160,6 @@ header .flex-box {
 
 .jumbotron-content {
     text-align: center;
-    color: white;
 }
 
 .jumbotron-content .btn-container {
@@ -193,7 +176,6 @@ main section .container{
 }
 
 main section .flex-box{
-    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -227,23 +209,45 @@ h3.stars-bg {
     background-repeat: no-repeat;
 }
 /* Footer content */
-footer .flex-box .white-border {
-    border-color: white;
+footer .container {
+    padding: 2rem 0;
 }
 
-footer .footer-1 {
-    padding: 5px 0 var(--padding-default) 0;
+footer .flex-box {
+    padding: 2rem 0;
 }
 
-footer .footer-2 {
-    padding: 10px 0 0 0;
+.footer-col {
+    flex-grow: 1;
 }
 
-footer .footer-2 .flex-box {
-    padding: calc(var(--padding-default) / 2) 0;
+.footer-col h3 {
+    padding: 0;
 }
 
-footer .footer-2 .flex-box > * {
-    flex-grow: 0;
-    padding: calc(var(--padding-default) / 8) calc(var(--padding-default) / 4);
+.site-map {
+    border-bottom: 1px solid #8EA1E1;
+}
+
+.footer-col .flex-box {
+    justify-content: start;
+    padding: 0;
+}
+
+.flex-box .language {
+    gap: 0.5rem;
+    padding: 2rem 0;
+}
+
+.flag {
+    height: 20px;
+}
+
+span {
+    font-size: 0.8rem;
+}
+
+.social-media a {
+    padding: 0.5rem;
+    font-size: 1.5rem;
 }
