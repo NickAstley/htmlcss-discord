@@ -12,15 +12,39 @@
   
 body {
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.8rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1, h2, h3 {
+    padding: 2rem 0;
+}
+
+p {
+    line-height: 1.5;
 }
 
 header {
-    background-color: #ADD8E6;
-}
-
-header ul li {
-    list-style: none;
-    display: inline;
+    background-image: url("../img/jumbo.png");
+    background-size: cover;
+    background-position: left center;
 }
 
 footer {
@@ -33,33 +57,8 @@ footer hr {
 }
 
 /* Background color classes */
-
-.mustard-bg {
-    background-color: #DAA520;;
-}
-
-.dark-blue-bg {
-    background-color: #00008B;
-}
-
-.pink-bg {
-    background-color: #EE82EE;
-}
-
-.blue-bg {
-    background-color: #1E90FF;
-}
-
-.light-pink-bg {
-    background-color: #FFC0CB;
-}
-
 .grey-bg {
-    background-color: #D3D3D3;
-}
-
-.green-bg {
-    background-color: #228B22;
+    background-color: #F6F6F6;
 }
 
 .salmon-bg {
@@ -78,7 +77,7 @@ footer hr {
 
 .container {
     width: 100%;
-    max-width: 960px;
+    max-width: 1100px;
     min-width: 300px;
     margin: 0 auto;
     padding: var(--padding-default) 0;
@@ -86,11 +85,10 @@ footer hr {
 
 .flex-box {
     display: flex;
-    justify-content: space-between;
 }
 
 .grow {
-    flex-grow: 1.5;
+    flex-grow: 2;
 }
 
 .row-reverse {
@@ -98,49 +96,136 @@ footer hr {
 }
 
 /* Flex-items styling */
-.flex-box > * {
-    border : 2px dashed black;
-    flex-grow: 1;
+.col {
     min-height: var(--section-content-min-height);
 }
 
-header .flex-box > *, footer .flex-box .logo, footer .flex-box .login-button {
+header .col, footer .flex-box .logo, footer .flex-box .login-button {
     min-height: unset;
 }
 
 /* Header content */
 header .container {
-    padding: calc(var(--padding-default) / 4) 0;
+    padding: calc(var(--padding-default) / 2) 0;
 }
 
-header .container .flex-box > * {
+header .flex-box {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.col {
     padding: calc(var(--padding-default) / 4);
 }
 
-.flex-box .navbar {
+.navbar {
     text-align: center;
     flex-grow: 3;
 }
 
-.flex-box .login-button {
-    text-align: right;
+.navbar ul li {
+    list-style: none;
+    display: inline;
 }
 
-/* Main content */
-.jumbotron-section .container{
-    padding: var(--padding-default) calc(var(--padding-default) * 4);
+.btn.login-btn{
+    padding: 0.7rem 1rem;
+}
+
+.flex-box .navbar a {
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+.btn {
+    display: inline-block;
+    color: black;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    flex-grow: 0;
+}
+
+.btn i {
+    padding-right: 0.3rem;
+}
+
+.btn-white {
+    background-color: white;
+}
+
+.btn-black {
+    background-color: black;
+}
+
+.btn-lille {
+    background-color: #8EA1E1;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.jumbotron-section .container {
+    padding: var(--padding-default) calc(var(--padding-default) * 7);
+    min-height: 400px;
 }
 
 .jumbotron-content {
-    min-height: var(--section-content-min-height);
-    border : 2px dashed black;
+    text-align: center;
+    color: white;
 }
 
-.section-4 .container > div {
-    min-height: calc(var(--section-content-min-height) * 2);
-    border : 2px dashed black;
+.jumbotron-content .btn-container {
+    padding: 2rem 0;
 }
 
+.jumbotron-content .flex-box {
+    justify-content: center;
+    gap: 1rem;
+}
+/* Main content */
+main section .container{
+    padding: calc(var(--padding-default) * 3) 0;
+}
+
+main section .flex-box{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.item-img {
+    width: 600px;
+}
+
+.item-text {
+    flex-basis: 350px;
+}
+
+.item-text p {
+    padding: 2rem 0;
+}
+
+.big-section {
+    text-align: center;
+}
+
+.wide-text {
+    padding: 0 4rem;
+}
+
+.big-item-img {
+    width: 100%;
+}
+
+h3.stars-bg {
+    background-image: url("../img/stars.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+}
 /* Footer content */
 footer .flex-box .white-border {
     border-color: white;
