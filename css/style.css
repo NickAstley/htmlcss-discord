@@ -1,6 +1,6 @@
 /* Variables declaration */
 :root {
-    --padding-default: 2rem;
+
     --section-content-min-height: 400px;
 }
 
@@ -57,6 +57,10 @@ footer {
 }
 
 /* Background color classes */
+.padding-default {
+    padding: 2rem 0;
+}
+
 .grey-bg {
     background-color: #F6F6F6;
 }
@@ -93,7 +97,7 @@ header .col, footer .flex-box .logo, footer .flex-box .login-button {
 
 /* Header content */
 header .container {
-    padding: calc(var(--padding-default) / 2) 0;
+    padding: calc(2rem / 2) 0;
 }
 
 header .flex-box {
@@ -154,16 +158,12 @@ header .flex-box {
 }
 
 .jumbotron-section .container {
-    padding: var(--padding-default) calc(var(--padding-default) * 7);
+    padding: 2rem calc(2rem * 7);
     min-height: 400px;
 }
 
 .jumbotron-content {
     text-align: center;
-}
-
-.jumbotron-content .btn-container {
-    padding: 2rem 0;
 }
 
 .jumbotron-content .flex-box {
@@ -172,7 +172,7 @@ header .flex-box {
 }
 /* Main content */
 main section .container{
-    padding: calc(var(--padding-default) * 3) 0;
+    padding: calc(2rem * 3) 0;
 }
 
 main section .flex-box{
@@ -185,10 +185,6 @@ main section .flex-box{
 
 .item-text {
     flex-basis: 350px;
-}
-
-.item-text p {
-    padding: 2rem 0;
 }
 
 .big-section {
@@ -209,13 +205,6 @@ h3.stars-bg {
     background-repeat: no-repeat;
 }
 /* Footer content */
-footer .container {
-    padding: 2rem 0;
-}
-
-footer .flex-box {
-    padding: 2rem 0;
-}
 
 .footer-col {
     flex-grow: 1;
@@ -236,7 +225,6 @@ footer .flex-box {
 
 .flex-box .language {
     gap: 0.5rem;
-    padding: 2rem 0;
 }
 
 .flag {
